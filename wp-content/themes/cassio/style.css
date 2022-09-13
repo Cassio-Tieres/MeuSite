@@ -1,0 +1,135 @@
+/*
+Theme Name: Cássio Tieres
+Text Domain: cassiotieres
+Version: 2.0
+Tested up to: 6.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+Author: Cássio Tieres
+Author URI: https://wordpress.org/
+Theme URI: https://wordpress.org/themes/twentytwenty/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	CSS Reset
+	1. 	Document Setup
+	2. 	Element Base
+	3. 	Helper Classes
+	4. 	Site Header
+	5. 	Menu Modal
+	6. 	Search Modal
+	7. 	Page Templates
+		a. 	Template: Cover Template
+		c. 	Template: Full Width
+	8.  Post: Archive
+	9.  Post: Single
+	10. Blocks
+	11. Entry Content
+	12. Comments
+	13. Site Pagination
+	14. Error 404
+	15. Widgets
+	16. Site Footer
+	17. Media Queries
+
+----------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------- */
+* {
+	background-color: #2c2c2c;
+}
+.bg-header {
+	padding: 0;
+    border-bottom: 1px solid grey;
+    height: 8vh !important;
+	margin-top: 3%;
+	background-color: #2c2c2c;
+}
+
+.navbar-brand, .nav-item {
+	color: white !important;
+}
+.nav-item {
+	margin: 10px;
+}
+.contato {
+	border: 1px solid white;
+}
+.nav-link:hover {
+	color: #1B97D2 !important;
+	border-bottom: 1px solid #1B97D2;
+}
+.contato:hover {
+	border: 1px solid #1B97D2;
+}
+.img-eu {
+	border-radius: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+.p-principal, .sobre-mim p {
+	color: white !important;
+}
+.big-font {
+	font-size: 80px !important;
+	color: #1B97D2;
+	opacity: .5;
+}
+.p-title {
+	font-size: 30px;
+	color: white;
+	position: relative;
+	top: -50px;
+	background-color: transparent;
+}
+
+.saiba-mais {
+	color: #1B97D2;
+	position: relative;
+	top: -50px;
+}
+
+.saiba-mais:hover {
+	color: #1B97D2;
+}
+
+.contato-section ul{
+	list-style-type: none;
+}
+.contato-section a{
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+}
+.contato-section a:hover{
+	color: #1B97D2 !important;
+}
+.form-control {
+	background-color: transparent;
+}
+.form-control:focus {
+	background-color: transparent;
+}
+.btn-form {
+    width: 100%;
+	background-color: #1B97D2;
+	border: none;
+}
