@@ -3,7 +3,7 @@
 <section class="descricao" id="header">
     <div class="container">
         <div class="row justify-content-center aling-items-center">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <img src="<?php echo the_field('imagem_eu'); ?>" alt="Eu" class="img-eu" style="margin-top: 50%;">
             </div>
             <div class="col-md-6">
