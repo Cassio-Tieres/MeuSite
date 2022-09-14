@@ -61,6 +61,7 @@ with others.
     height: 8vh !important;
 	margin-top: 3%;
 	background-color: #2c2c2c;
+	z-index: 1000;
 }
 
 .navbar-brand, .nav-item {
@@ -92,6 +93,7 @@ with others.
 	font-size: 80px !important;
 	color: #1B97D2;
 	opacity: .5;
+	z-index: 999;
 }
 .p-title {
 	font-size: 30px;
@@ -132,4 +134,12 @@ with others.
     width: 100%;
 	background-color: #1B97D2;
 	border: none;
+}
+.tecnology {
+	z-index: 999;
+}
+.tecnology img {
+	width: 200px !important;
+	height: 200px;
+	max-height: 637px;
 }

@@ -43,9 +43,13 @@
             </p>
 
             <div class="owl-carousel owl-theme tecnology">
+                <?php if(!empty(have_rows('tecnologias'))):
+                    while(have_rows('tecnologias')): the_row()?>
                 <div class="item">
-                    <img src="" alt="">
+                    <img src="<?php echo the_sub_field('imagem_tecnologia'); ?>" alt="Tecnologias">
                 </div>
+                <?php endwhile;
+                endif; ?>
             </div>
         </div>
     </div>
@@ -77,7 +81,7 @@
                 <ul>
                     <li><a href="<?php echo the_field('linkedin') ?>" target="_blank"><i class="bi bi-linkedin"></i></a></li>
                     <li><a href="<?php echo the_field('github') ?>" target="_blank"><i class="bi bi-github"></i></a></li>
-                    <li><a href="<?php echo the_field('instagram') ?>" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <!--<li><a href="<?php echo the_field('instagram') ?>" target="_blank"><i class="bi bi-instagram"></i></a></li>-->
                 </ul>
             </div>
             <div class="col-md-4">
@@ -87,11 +91,30 @@
     </div>
 </section>
 
-<script src="wp-content/themes/atelie/assets/js/jquery-3.6.1.min.js"></script>
-<script src="wp-content/themes/atelie/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script> 
+<script src="<?php echo get_template_directory_uri()?>/assets/js/jquery-3.6.1.min.js"></script>
+<script src="<?php echo get_template_directory_uri()?>/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script> 
 
 <script>
-
+$('.tecnology').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    //autoWidth: true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:5
+        },
+        1000:{
+            items:5
+        }
+    },
+    autoplay: true,
+    autoplayTimeout: 3000
+})
 </script>
 
 <?php get_footer(); ?>

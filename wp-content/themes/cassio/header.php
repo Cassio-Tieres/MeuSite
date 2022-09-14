@@ -30,8 +30,8 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 		<!--OWL-CAROUSEL-->
-        <link rel="stylesheet" href="wp-content/themes/atelie/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="wp-content/themes/atelie/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
 
 		<!-- MEU CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -61,7 +61,7 @@
 				</div>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<div class="navbar-nav">
-					<a href="#header" class="nav-item nav-link"><i class="bi bi-instagram"></i></a>
+					<!--<a href="#header" class="nav-item nav-link"><i class="bi bi-instagram"></i></a>-->
 					<a href="#sobre-mim" class="nav-item nav-link"><i class="bi bi-linkedin"></i></a>
 					<a href="#projetos" class="nav-item nav-link"><i class="bi bi-whatsapp"></i></a>
 					</div>
