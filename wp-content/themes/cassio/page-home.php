@@ -2,13 +2,12 @@
 
 <section class="descricao" id="header">
     <div class="container">
-        <div class="row justify-content-center aling-items-center">
-            <div class="col-md-4">
+        <div class="row justify-content-center aling-items-center" data-anime="left">
+            <div class="col-md-3">
                 <img src="<?php echo the_field('imagem_eu'); ?>" alt="Eu" class="img-eu" style="margin-top: 50%;">
             </div>
-            <div class="col-md-6">
-                <h4 style="color: white; margin-top: 40%;">Quem sou eu?</h4>
-                <p class="p-principal">
+            <div class="col-md-4">
+                <p class="p-principal" style="font-size: 40px;">
                     <?php
                     the_field('descricao_eu');
                     ?>
@@ -20,7 +19,7 @@
 
 <section class="um-pouco-mais" id="sobre-mim">
     <div class="container">
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center" data-anime="right">
             <h2 class="big-font mt-5">Sobre Mim</h2>
             <p class="p-title">
                 Um pouco mais sobre mim
@@ -36,13 +35,13 @@
 
 <section class="tecnologias" id="tecnologias">
     <div class="container">
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center" data-anime="left">
             <h2 class="big-font mt-5">Tecnologias</h2>
             <p class="p-title">
                 Tecnologias que eu trabalho
             </p>
 
-            <div class="owl-carousel owl-theme tecnology">
+            <div class="owl-carousel owl-theme tecnology justify-content-center">
                 <?php if(!empty(have_rows('tecnologias'))):
                     while(have_rows('tecnologias')): the_row()?>
                 <div class="item">
@@ -57,7 +56,7 @@
 
 <section class="projetos" id="projetos">
     <div class="container">
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center" data-anime="right">
             <h2 class="big-font mt-5">Projetos</h2>
             <p class="p-title">
                 Veja os destaques dos meus projetos
@@ -71,7 +70,7 @@
 
 <section class="contato-section" id="contato">
     <div class="container">
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center" data-anime="left">
             <h2 class="big-font mt-5">Contato</h2>
             <p class="p-title">
                 Entre em contato comigo
@@ -93,6 +92,24 @@
 
 <script src="<?php echo get_template_directory_uri()?>/assets/js/jquery-3.6.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri()?>/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script> 
+<script>
+    //Home
+    const target = document.querySelectorAll('[data-anime]');
+    const animationClassHome = 'animar';
+
+    function animacaoScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight + 0) / 4);
+        target.forEach(function(e) {
+            if((windowTop) > e.offsetTop) {
+                e.classList.add(animationClassHome);
+            }
+        });
+    }
+
+    window.addEventListener('scroll', function() {
+        animacaoScroll();
+    })
+</script>
 
 <script>
 $('.tecnology').owlCarousel({
@@ -101,19 +118,20 @@ $('.tecnology').owlCarousel({
     nav:false,
     //autoWidth: true,
     dots: false,
+    center: true,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:5
+            items:1
         },
         1000:{
             items:5
         }
     },
     autoplay: true,
-    autoplayTimeout: 3000
+    autoplayTimeout: 1000
 })
 </script>
 
