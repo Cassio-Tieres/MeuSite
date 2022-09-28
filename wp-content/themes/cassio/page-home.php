@@ -114,17 +114,17 @@
 <script>
 $('.tecnology').owlCarousel({
     loop:true,
-    margin:10,
+    margin:50,
     nav:false,
-    //autoWidth: true,
+    autoWidth: true,
     dots: false,
-    center: true,
+    //center: true,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:1
+            items:3
         },
         1000:{
             items:5
