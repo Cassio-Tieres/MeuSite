@@ -165,6 +165,14 @@ with others.
 	transform: translate3d(0px, 0px, 0px);
 }
 
+.card-body{
+	background-color: #fff;
+}
+
+.card-body h5, .card-body p {
+	background-color: transparent;
+}
+
 @media (max-width: 665px) {
 	.bg-header {
 		height: 10vh;

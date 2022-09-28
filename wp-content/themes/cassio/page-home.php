@@ -62,6 +62,20 @@
                 Veja os destaques dos meus projetos
             </p>
             <a href="" class="saiba-mais">Saiba mais</a>
+
+            <?php if(have_rows('projetos_home')): 
+                while(have_rows('projetos_home')): the_row()?>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo the_sub_field('imagem_projeto') ?>" class="card-img-top" alt="<?php echo the_sub_field('nome_projeto') ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo the_sub_field('nome_projeto') ?></h5>
+                            <p class="card-text"><?php echo the_sub_field('descricao_projeto')?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile;  
+            endif; ?>
         </div>
     </div>
 </section>
@@ -92,47 +106,5 @@
 
 <script src="<?php echo get_template_directory_uri()?>/assets/js/jquery-3.6.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri()?>/assets/js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script> 
-<script>
-    //Home
-    const target = document.querySelectorAll('[data-anime]');
-    const animationClassHome = 'animar';
-
-    function animacaoScroll() {
-        const windowTop = window.pageYOffset + ((window.innerHeight + 0) / 4);
-        target.forEach(function(e) {
-            if((windowTop) > e.offsetTop) {
-                e.classList.add(animationClassHome);
-            }
-        });
-    }
-
-    window.addEventListener('scroll', function() {
-        animacaoScroll();
-    })
-</script>
-
-<script>
-$('.tecnology').owlCarousel({
-    loop:true,
-    margin:50,
-    nav:false,
-    autoWidth: true,
-    dots: false,
-    //center: true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    },
-    autoplay: true,
-    autoplayTimeout: 1000
-})
-</script>
 
 <?php get_footer(); ?>
